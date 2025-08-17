@@ -21,3 +21,13 @@ char* pangrams(char* s) {
     else
         return "not pangram";
 }
+int main() {
+    char str[1000];   
+    fgets(str, sizeof(str), stdin);
+
+  
+    str[strcspn(str, "\n")] = 0;
+
+    printf("%s\n", pangrams(str));
+    return 0;
+}
